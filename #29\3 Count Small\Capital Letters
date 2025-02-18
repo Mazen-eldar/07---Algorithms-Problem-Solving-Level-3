@@ -1,0 +1,55 @@
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+string ReadString()
+{
+	string S1;
+	cout << "Please Enter Your String?\n";
+	getline(cin, S1);
+
+	return S1;
+
+}
+
+bool CheckLetterCase(char char1)
+{
+	
+	return isupper(char1) ? true : false;
+}
+
+
+void countAllStringLettersCase(string S1)
+{
+	int CountUpper = 0;
+	int CountLower = 0;
+	cout << "String Length :" << S1.length() << endl;
+	for (short i = 0; i < S1.length(); i++)
+	{
+		if (CheckLetterCase(S1[i]))
+			CountUpper++;
+		else
+			CountLower++;
+
+	}
+
+	cout << "Capital Letters Count :" << CountUpper << endl;
+	cout << "Lower Letters Count :" << CountLower << endl;
+
+
+}
+
+
+int main()
+{
+
+	string S1 = ReadString();
+
+	countAllStringLettersCase(S1);
+	
+
+
+	system("pause>0");
+
+}
