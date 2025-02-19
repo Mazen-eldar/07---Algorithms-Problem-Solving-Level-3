@@ -1,0 +1,48 @@
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+
+char ReadChar()
+{
+	char Ch1;
+	cout << "\nPlease Enter a Character?\n";
+	cin >> Ch1;
+
+	return Ch1;
+
+}
+
+char InvertLetterCase(char char1)
+{
+	return isupper(char1) ? tolower(char1) : toupper(char1);
+}
+
+bool IsVowel(char Ch1)
+{
+	switch (tolower(Ch1))
+	{
+	case 'a': case 'e': case 'i': case 'o': case 'u':
+		return true;
+	default:
+		return false;
+	}
+}
+
+
+
+int main()
+{
+	
+	char Ch1 = ReadChar();
+
+	if (IsVowel(Ch1))
+		cout << "Yes,Letter " << Ch1 << " Is Vowel" << endl;
+	else
+		cout << "No,Letter " << Ch1 << " Is Not Vowel" << endl;
+
+
+	system("pause>0");
+
+}
